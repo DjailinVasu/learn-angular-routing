@@ -28,7 +28,6 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/scss/bootstrap.scss",
               "src/styles.scss"
             ],
             "scripts": []
@@ -124,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-routing"
+    }
+  },
+  "defaultProject": "angular-routing",
+  "cli": {
+    "analytics": false
+  }
 }
