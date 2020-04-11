@@ -1,21 +1,35 @@
 <h1 class="display-3 mb-4">Posts page</h1>
 
 <div class="btn-group mb-4">
-  <button class="btn btn-primary">
+  <button
+    class="btn btn-primary"
+    [routerLink]="['/posts']"
+    [queryParams]="{ showIds: true}"
+    fragment="fragment"
+  >
     Show Ids
   </button>
-  <button class="btn btn-primary">
+
+  <button
+  class="btn btn-primary"
+  (click)="showIdsProgram()"
+  >
     Show Ids (program)
   </button>
 </div>
 
-<div class="card mb-3" *ngFor="let post of posts">
-  <div class="card-body">
-    <h4>
-      <a [routerLink]="['/posts', post.id]">
-        <strong>(ID {{post.id}})</strong>
-        {{post.title}}
-      </a>
-    </h4>
-  </div>
+<div class="row">
+    <div class="col-12 col-md-6 col-lg-4" *ngFor="let post of posts">
+      <div class="card mb-3">
+        <div class="card-body">
+          <h4>
+            <a [routerLink]="['/posts', post.id]">
+              <strong *ngIf="showIds">(ID {{post.id}})</strong>
+              {{post.title}}
+            </a>
+          </h4>
+        </div>
+      </div>
+    </div>
 </div>
+
