@@ -1,9 +1,9 @@
 <div>
   <button class="btn btn-primary btn-sm">Back</button>
 
-  <h1 class="display-3 mb-4">Title</h1>
+  <h1 class="display-3 mb-4"> {{post.title}} </h1>
 
-  <p>Text</p>
+  <p>{{post.text}}</p>
 
-  <button class="btn btn-danger">Load 4 post</button>
+  <button class="btn btn-danger" (click)="loadPost()">Load 4 post</button>
 </div>
